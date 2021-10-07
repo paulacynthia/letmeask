@@ -1,5 +1,9 @@
-function Button() {
-  return <button>Clique aqui</button>;
-}
+import { ButtonHTMLAttributes } from "react";
 
-export default Button;
+import "../styles/button.scss";
+
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+
+export function Button(props: ButtonProps) {
+  return <button className="button" {...props} />;
+}
